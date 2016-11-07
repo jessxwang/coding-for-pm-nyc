@@ -10,7 +10,7 @@
  4. Also in the "Terminal of Oz" directory, create another directory named "Oz"
  5. In the "oz" directory, create a directory called "munchkinland"
  6. In the "munchkinland" directory, create the following files:
-    * wicked_with_of_the_east.txt
+    * wicked_witch_of_the_east.txt
     * mayor.txt
     * lollipop_guild.csv
 
