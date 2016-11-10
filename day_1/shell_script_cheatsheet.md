@@ -1,8 +1,8 @@
 # Shell Script Cheat Sheet
 
-| empty | Mac/Linux | Windows|
-|-|-----------|----|
-| Change Directory | cd | cd|
+empty | Mac/Linux | Windows|
+-|-----------|----|
+Change Directory | cd | cd|
 | Print Current Directory | pwd | pwd|
 | List Files | ls | ls |
 | Create Directory | mkdir [target] | mkdir [target] |
