@@ -1,6 +1,6 @@
 # Shell Script Cheat Sheet
 
-| | Mac/Linux | Windows|
+| empty | Mac/Linux | Windows|
 |-|-----------|----|
 | Change Directory | cd | cd|
 | Print Current Directory | pwd | pwd|
