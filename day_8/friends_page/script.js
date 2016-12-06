@@ -55,7 +55,36 @@ var addNewFriend = function(){
 	resetFields();
 };
 
+var deleteAllFriends = function(){
+	var friendList = document.getElementById('friend-list');
+	var friends = friendList.children;
+	var start = friends.length - 1;
+
+	// Assuming we have 3 items in the array...
+	// first iteration: i is 2, and we are removing the last element(2)
+	// second interation: i is 1, and we are removing the last element(1)
+	// third iteration: i is 0, and we are removing the last element(0)
+	// for (var i = start; i => 0; i--) {
+	// 	console.log(i);
+	// 	friendList.removeChild(friends[i]);
+	// 	console.log(friends.length);
+	// }
+
+	// for (<initial setup> ; <condition> ; <follow up>) {
+	for( ; friends.length > 0; ) {
+		console.log('removing a friend');
+		console.log('Friends before removal: ', friends);
+		friendList.removeChild(friends[friends.length - 1]);
+		console.log('Friends after removal: ', friends);
+		console.log('**********');
+	}	
+
+};
+
 window.onload = function(){
 	var submitButton = document.getElementById('friend-data-submit');
-	submitButton.addEventListener('click', addNewFriend)
+	var deleteButton = document.getElementById('delete-all-button');
+
+	submitButton.addEventListener('click', addNewFriend);
+	deleteButton.addEventListener('click', deleteAllFriends);
 };
