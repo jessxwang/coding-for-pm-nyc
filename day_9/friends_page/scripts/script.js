@@ -5,8 +5,7 @@ var newFriendName = function(){
 	var $newNameElement = $('<p></p>');
 
 	// newNameElement.innerText = nameInput.value;
-	$newNameElement.text($nameInput.val());
-
+	$newNameElement.text($nameInput.val()).addClass('name');
 
 	return $newNameElement;
 };
@@ -18,7 +17,7 @@ var newHomeTown = function(){
 	var $newHometownElement = $('<p></p>');
 
 	// newHometownElement.innerText = hometownInput.value;
-	$newHometownElement.text($hometownInput.val())
+	$newHometownElement.text($hometownInput.val()).addClass('hometown')
 
 	return $newHometownElement;
 };
@@ -30,19 +29,23 @@ var newFriendMeeting = function(){
 	var $newMeetingElement = $('<p></p>');
 
 	// newMeetingElement.innerText = meetingInput.value;
-	$newMeetingElement.text($meetingInput.val())
+	$newMeetingElement.text($meetingInput.val()).addClass('meeting');
 
 	return $newMeetingElement;
 };
 
 var resetFields = function(){
-	var nameInput = document.getElementById('friend-name');
-	var hometownInput = document.getElementById('friend-hometown');
-	var meetingInput = document.getElementById('friend-meeting');
+	// var nameInput = document.getElementById('friend-name');
+	// var hometownInput = document.getElementById('friend-hometown');
+	// var meetingInput = document.getElementById('friend-meeting');
 
-	nameInput.value = '';
-	hometownInput.value = '';
-	meetingInput.value = '';
+	// nameInput.value = '';
+	// hometownInput.value = '';
+	// meetingInput.value = '';
+
+	$('#friend-name').val('');
+	$('#friend-hometown').val('');
+	$('#friend-meeting').val('');
 };
 
 var addNewFriend = function(){
@@ -68,9 +71,9 @@ var addNewFriend = function(){
 };
 
 var deleteAllFriends = function(){
-	var friendList = document.getElementById('friend-list');
-	var friends = friendList.children;
-	var start = friends.length - 1;
+	// var friendList = document.getElementById('friend-list');
+	// var friends = friendList.children;
+	// var start = friends.length - 1;
 
 	// Assuming we have 3 items in the array...
 	// first iteration: i is 2, and we are removing the last element(2)
@@ -83,14 +86,21 @@ var deleteAllFriends = function(){
 	// }
 
 	// for (<initial setup> ; <condition> ; <follow up>) {
-	for( ; friends.length > 0; ) {
-		console.log('removing a friend');
-		console.log('Friends before removal: ', friends);
-		friendList.removeChild(friends[friends.length - 1]);
-		console.log('Friends after removal: ', friends);
-		console.log('**********');
-	}	
+	// for( ; friends.length > 0; ) {
+	// 	console.log('removing a friend');
+	// 	console.log('Friends before removal: ', friends);
+	// 	friendList.removeChild(friends[friends.length - 1]);
+	// 	console.log('Friends after removal: ', friends);
+	// 	console.log('**********');
+	// }	
 
+	$friendList = $('#friend-list');
+	// $friendList.children().each(function(idx){
+		// console.log('Removing element ' + idx + ': ', this);
+		// $(this).remove();
+	// });
+
+	$friendList.children().remove();
 };
 
 $(function(){
